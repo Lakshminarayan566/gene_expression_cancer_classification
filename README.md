@@ -52,6 +52,24 @@ Step 4 → Biomarker Discovery (69 DE genes, Volcano plots, Heatmap)
 ```
 
 ---
+## Visual Results
+
+To evaluate the performance of the cancer classification models, we analyzed both ROC curves and confusion matrices generated from the test dataset.
+
+**Confusion Matrix Analysis**
+The confusion matrix illustrates how many samples from each cancer type were correctly classified versus misclassified. The model shows strong diagonal dominance, indicating high prediction accuracy across major cancer classes. Minor misclassifications appear primarily in classes with fewer samples, reflecting dataset imbalance rather than model instability.
+<img width="640" height="480" alt="confusion_matrix" src="https://github.com/user-attachments/assets/aab35304-4c91-4cf8-bf73-9204a5274614" />
+
+
+
+**ROC Curve Interpretation**
+The multi-class ROC curves measure the model’s ability to distinguish between different cancer subtypes. Both SVM and Random Forest achieved near-ideal ROC behavior, with macro AUC values close to 0.98. This indicates that the models learned highly discriminative patterns in gene expression space and can reliably separate cancer classes beyond random chance.
+<img width="600" height="500" alt="roc_curve" src="https://github.com/user-attachments/assets/df8fcfab-f16f-43a0-b0e7-8a7bb623f6b0" />
+
+
+**Overall Insight**
+Together, the confusion matrix and ROC curves confirm that gene expression signatures provide strong predictive power for cancer subtype identification. The evaluation demonstrates that the pipeline generalizes well to unseen patients while maintaining high sensitivity and specificity.
+
 
 ## Key Techniques
 
